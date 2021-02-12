@@ -1,16 +1,17 @@
 import express from 'express';
-import { loadFeatureSets } from './utils.js';
+import { loadFeatureSets, findCloseTrailheads } from './utils.js';
 
 const app = express()
 const port = 3000
 
-const { streams, trailheads } = loadFeatureSets()
+const { streams, trailheads } = loadFeatureSets();
 
-app.get('/geometry', (req, res) => {
-  const bufferMiles = req.query.bufferSize ?? 1;
+app.get('/geo/trailheads', (req, res) => {
+  const streamWithin = req.query.streamWithin ?? 1;
+  findCloseTrailheads(streams, trailheads, streamWithin);
   res.send(trailheads)
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Trailhead app listening at http://localhost:${port}`)
 })
