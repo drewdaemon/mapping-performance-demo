@@ -23,7 +23,7 @@ services:
     restart: always
     environment:
       # obviously you wouldn't actually declare any passwords in source control in a real application
-      POSTGRES_PASSWORD: pg_pass
+      - POSTGRES_PASSWORD=pg_pass
 
   adminer:
     image: adminer
