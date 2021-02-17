@@ -1,12 +1,32 @@
 version: '3'
 
 services:
-  db:
-    build:
-      dockerfile: Dockerfile
-      context: ./
+  app:
+    build: ./api
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
+    environment:
+      - PGUSER=postgres
+      - PGHOST=postgres
+      - PGDATABASE=postgres
+      - PGPASSWORD=pg_pass
+      - PGPORT=5432
+    volumes:
+      - /app/node_modules
+      - ./api:/app
+
+  postgres:
+    build: ./database
+    restart: always
+    environment:
+      # obviously you wouldn't actually declare any passwords in source control in a real application
+      POSTGRES_PASSWORD: pg_pass
+
+  adminer:
+    image: adminer
     restart: always
     ports:
-      - "5433:5432"
-    environment:
-      POSTGRES_PASSWORD: example
+      - 8080:8080
