@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  api:
+    build: ./api
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      - ./api:/app
