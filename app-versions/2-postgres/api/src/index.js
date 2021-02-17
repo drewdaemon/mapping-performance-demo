@@ -8,10 +8,10 @@ app.get('/geo/trailheads', async (req, res) => {
   const streamWithin = req.query.streamWithin ?? 1;
   let resBody;
   try {
-    const dbRes = await findCloseTrailheads(streamWithin);
-    resBody = JSON.stringify(dbRes);
+    resBody = await findCloseTrailheads(streamWithin);
   } catch (err) {
-    resBody = JSON.stringify(err);
+    res.status(500);
+    resBody = err;
   }
   res.send(resBody);
 })
