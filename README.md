@@ -3,6 +3,8 @@
 ## Overview
 This is a repository of several versions of the same "Utah Stream Trailheads" app with varying degrees of performance. The app displays all the trailheads on a map of Utah within a given distance of a major Utah stream/river.
 
+![App Diagram](diagram.png)
+
 The app versions are found in [app-versions](./app-versions) and listed in increasing order of performance. In each app version folder, you will find a `README.md` file that lists more details about each version.
 
 While there are many geo-specific optimization techniques you would want to use in production or in a larger application, I chose to focus on improvements that can be made to almost any web application.
