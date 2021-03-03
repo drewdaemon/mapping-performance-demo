@@ -10,7 +10,9 @@ const map = new Map({
 
 const view = new MapView({
   map,
-  center: [-118.805, 34.027],
-  zoom: 13,
+  center: [-111.46668983380363, 39.09515673089838],
+  zoom: 7,
   container: 'viewDiv'
 });
+
+setInterval(() => console.log(view.zoom), 1000);
