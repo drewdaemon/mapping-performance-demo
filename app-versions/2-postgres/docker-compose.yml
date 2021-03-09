@@ -3,7 +3,6 @@ version: '3'
 services:
   api:
     build: ./api
-    restart: always
     depends_on:
       - postgres
     ports:
@@ -20,13 +19,11 @@ services:
 
   postgres:
     build: ./database
-    restart: always
     environment:
       # obviously you wouldn't actually declare any passwords in source control in a real application
       - POSTGRES_PASSWORD=pg_pass
 
   adminer:
     image: adminer
-    restart: always
     ports:
       - 8080:8080

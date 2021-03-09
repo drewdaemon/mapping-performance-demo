@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  api:
+    build: ./api
+    depends_on:
+      - postgres
+    ports:
+      - "3000:80"
+    environment:
+      - PGUSER=postgres
+      - PGHOST=postgres
+      - PGDATABASE=postgres
+      - PGPASSWORD=pg_pass
+      - PGPORT=5432
+    volumes:
+      - /app/node_modules
+      - ./api:/app
+
+  postgres:
+    build: ./database
+    environment:
+      # obviously you wouldn't actually declare any passwords in source control in a real application
+      - POSTGRES_PASSWORD=pg_pass
+
+  adminer:
+    image: adminer
+
+    ports:
+      - 8080:8080

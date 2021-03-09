@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <title>Trailheads</title>
+                <geoform>vector digital data</geoform>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Trailheads are point locations that provide access, and often vehicle parking, for recreational trail users. This map layer features many of Utah’s trailheads but is not yet complete. In the future, it is expected to include trailhead data assembled from a variety of sources including: US Forest Service, US National Parks Service, State Parks, and map data for which full rights were purchased by the GOED Outdoor Recreation Office in July 2014, from a private entity (Orbital View, Inc). 
+
+
+Currently (April 2017), this layer includes only the original data purchased from Orbital View. Additional trailheads can be submitted to Utah AGRC for inclusion in this map layer.
+
+
+The primary goal for the trailheads map layer is to assign a location and a name to each trailhead. However, the trailhead data is stored within a more complex data model that will allow for collection and publishing of more robuts trail and trailhead information in the future: (https://docs.google.com/spreadsheets/d/1OPGKmRrLYUBr9qO9EtbX6AwcRla82xMvc-BDr26ia9k/edit#gid=0)</abstract>
+            <purpose>Represent the location, name and characteristics of recreational trailheads in Utah. While many of Utah’s trailheads are included in this dataset, it is not yet substantially complete.</purpose>
+        </descript>
+        <accconst>None</accconst>
+        <useconst>None</useconst>
+        <native> Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</native>
+    </idinfo>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Entity point</sdtstype>
+                <ptvctcnt>0</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>Trailheads</enttypl>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PrimaryName</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>TrailheadID</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Features</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>PrimaryMaintenance</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SeasonalRestriction</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>InfoURL</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Comments</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>DataSource</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>LastUpdate</attrlabl>
+            </attr>
+        </detailed>
+    </eainfo>
+    <metainfo>
+        <metd>20191023</metd>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
