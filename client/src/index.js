@@ -14,5 +14,3 @@ const view = new MapView({
   zoom: 7,
   container: 'viewDiv'
 });
-
-setInterval(() => console.log(view.zoom), 1000);
