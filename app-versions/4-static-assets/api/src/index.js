@@ -11,7 +11,7 @@ async function main () {
   for (const proximity of proximityOptions) {
     try {
       const geoJsonObj = await findCloseTrailheads(proximity);
-      writeFileSync(`${nginxStaticAssetRoot}/${proximity}-mile-trailheads.geojson`, JSON.stringify(geoJsonObj));
+      writeFileSync(`${nginxStaticAssetRoot}/${proximity}-mile-trailheads.json`, JSON.stringify(geoJsonObj));
     } catch (err) {
       console.error(err);
     }
